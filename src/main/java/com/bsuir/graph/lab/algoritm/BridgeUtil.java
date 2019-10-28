@@ -1,4 +1,4 @@
-package com.bsuir.graph.lab;
+package com.bsuir.graph.lab.algoritm;
 
 import org.jgrapht.Graph;
 import org.jgrapht.graph.DefaultEdge;
@@ -53,7 +53,9 @@ public class BridgeUtil {
         return targetVertex;
     }
 
-    private static void bridge(final Graph graph) {
+    public static void bridge(final Graph graph) {
+
+        System.out.println("-------------");
 
         time = 0;
 
@@ -74,41 +76,5 @@ public class BridgeUtil {
         for (final Integer vertex : vertexSet)
             if (!visited[vertex])
                 dfsAndFindBridges(vertex, visited, discoveryTime, lowValue, -1, graphDelegator);
-    }
-
-    public static void main(String[] args) {
-
-        Graph<Integer, DefaultEdge> graph = new SimpleGraph<Integer, DefaultEdge>(DefaultEdge.class);
-        graph.addVertex(0);
-        graph.addVertex(1);
-        graph.addVertex(2);
-        graph.addVertex(3);
-        graph.addVertex(4);
-
-        graph.addEdge(0, 1);
-        graph.addEdge(0, 2);
-        graph.addEdge(1, 2);
-        graph.addEdge(0, 3);
-        graph.addEdge(4, 3);
-
-//        Graph<Integer, DefaultEdge> graph = new SimpleGraph<Integer, DefaultEdge>(DefaultEdge.class);
-//        graph.addVertex(0);
-//        graph.addVertex(1);
-//        graph.addVertex(2);
-//        graph.addVertex(3);
-//        graph.addVertex(4);
-//        graph.addVertex(5);
-//        graph.addVertex(6);
-//
-//        graph.addEdge(0, 1);
-//        graph.addEdge(0, 2);
-//        graph.addEdge(1, 2);
-//        graph.addEdge(1, 6);
-//        graph.addEdge(1, 3);
-//        graph.addEdge(1, 4);
-//        graph.addEdge(3, 5);
-//        graph.addEdge(4, 5);
-
-        bridge(graph);
     }
 }
