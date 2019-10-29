@@ -21,7 +21,7 @@ public class Main {
 
         bridge(getBridgeGraph3());
         findBiconnectedComponents(getBccGraph());
-        findChords(getChordalGraph2());
+        findChords(getChordalGraph());
 
     }
 

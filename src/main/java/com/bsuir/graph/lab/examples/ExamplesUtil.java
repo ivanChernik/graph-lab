@@ -84,7 +84,7 @@ public class ExamplesUtil {
         return graph;
     }
 
-    public static Graph getChordalGraph1() {
+    public static Graph getChordalGraph() {
 
         Graph graph = new SimpleGraph<Integer, DefaultEdge>(DefaultEdge.class);
 
@@ -99,27 +99,6 @@ public class ExamplesUtil {
         graph.addEdge(4, 0);
         graph.addEdge(1, 4);
         graph.addEdge(1, 3);
-
-        return graph;
-    }
-
-    public static Graph getChordalGraph2() {
-
-        Graph graph = new SimpleGraph<Integer, DefaultEdge>(DefaultEdge.class);
-
-        for (int i = 0; i < 6; i++) {
-            graph.addVertex(i);
-        }
-
-        graph.addEdge(0, 1);
-        graph.addEdge(0, 2);
-        graph.addEdge(0, 3);
-        graph.addEdge(0, 4);
-        graph.addEdge(0, 5);
-        graph.addEdge(1, 2);
-        graph.addEdge(2, 3);
-        graph.addEdge(3, 4);
-        graph.addEdge(4, 5);
 
         return graph;
     }
