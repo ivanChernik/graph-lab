@@ -33,7 +33,7 @@ public class ExamplesUtil {
         return graph;
     }
 
-    public static Graph getBridgeGraph() {
+    public static Graph getBridgeGraph1() {
 
         Graph graph = new SimpleGraph<Integer, DefaultEdge>(DefaultEdge.class);
 
@@ -50,7 +50,41 @@ public class ExamplesUtil {
         return graph;
     }
 
-    public static Graph getChordalGraph() {
+    public static Graph getBridgeGraph2() {
+
+        Graph graph = new SimpleGraph<Integer, DefaultEdge>(DefaultEdge.class);
+
+        for (int i = 0; i < 4; i++) {
+            graph.addVertex(i);
+        }
+
+        graph.addEdge(0, 1);
+        graph.addEdge(1, 2);
+        graph.addEdge(2, 3);
+
+        return graph;
+    }
+
+    public static Graph getBridgeGraph3() {
+
+        Graph graph = new SimpleGraph<Integer, DefaultEdge>(DefaultEdge.class);
+
+        for (int i = 0; i < 7; i++) {
+            graph.addVertex(i);
+        }
+
+        graph.addEdge(0, 1);
+        graph.addEdge(0, 2);
+        graph.addEdge(2, 1);
+        graph.addEdge(1, 6);
+        graph.addEdge(1, 3);
+        graph.addEdge(1, 4);
+        graph.addEdge(3, 5);
+        graph.addEdge(4, 5);
+        return graph;
+    }
+
+    public static Graph getChordalGraph1() {
 
         Graph graph = new SimpleGraph<Integer, DefaultEdge>(DefaultEdge.class);
 
@@ -69,6 +103,27 @@ public class ExamplesUtil {
         return graph;
     }
 
+    public static Graph getChordalGraph2() {
+
+        Graph graph = new SimpleGraph<Integer, DefaultEdge>(DefaultEdge.class);
+
+        for (int i = 0; i < 6; i++) {
+            graph.addVertex(i);
+        }
+
+        graph.addEdge(0, 1);
+        graph.addEdge(0, 2);
+        graph.addEdge(0, 3);
+        graph.addEdge(0, 4);
+        graph.addEdge(0, 5);
+        graph.addEdge(1, 2);
+        graph.addEdge(2, 3);
+        graph.addEdge(3, 4);
+        graph.addEdge(4, 5);
+
+        return graph;
+    }
+
     public static Graph getCompleteGraph() {
         Graph graph = new SimpleGraph<Integer, DefaultEdge>(DefaultEdge.class);
         graph.addVertex(1);
@@ -83,39 +138,39 @@ public class ExamplesUtil {
 
     public static Graph getEmptyGraph() {
         Graph graph = new SimpleGraph<Integer, DefaultEdge>(DefaultEdge.class);
+        graph.addVertex(0);
         graph.addVertex(1);
         graph.addVertex(2);
         graph.addVertex(3);
-        graph.addVertex(4);
 
         return graph;
     }
 
     public static Graph getConnectedGraph() {
         Graph graph = new SimpleGraph<Integer, DefaultEdge>(DefaultEdge.class);
+        graph.addVertex(0);
         graph.addVertex(1);
         graph.addVertex(2);
         graph.addVertex(3);
-        graph.addVertex(4);
 
+        graph.addEdge(0, 1);
+        graph.addEdge(0, 2);
         graph.addEdge(1, 2);
-        graph.addEdge(1, 3);
         graph.addEdge(2, 3);
-        graph.addEdge(3, 4);
 
         return graph;
     }
 
     public static Graph getUnconnectedGraph() {
         Graph graph = new SimpleGraph<Integer, DefaultEdge>(DefaultEdge.class);
+        graph.addVertex(0);
         graph.addVertex(1);
         graph.addVertex(2);
         graph.addVertex(3);
-        graph.addVertex(4);
 
+        graph.addEdge(0, 1);
+        graph.addEdge(0, 2);
         graph.addEdge(1, 2);
-        graph.addEdge(1, 3);
-        graph.addEdge(2, 3);
 
         return graph;
     }

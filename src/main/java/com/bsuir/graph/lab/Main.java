@@ -19,9 +19,9 @@ public class Main {
         checkIfGraphIsComplete(graph);
 
 
-        bridge(getBridgeGraph());
+        bridge(getBridgeGraph3());
         findBiconnectedComponents(getBccGraph());
-        findChords(getChordalGraph());
+        findChords(getChordalGraph2());
 
     }
 
